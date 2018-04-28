@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RobloxAPI;
 
 namespace RobloxControlPanel
 {
-    public partial class Form1 : Form
+    public partial class Main : MaterialSkin.Controls.MaterialForm
     {
-        public Form1()
+        private RobloxLib Roblox;
+
+        public Main()
         {
             InitializeComponent();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            Roblox = new RobloxLib();
         }
     }
 }
